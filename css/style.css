@@ -3365,7 +3365,7 @@ h6 {
 
 /* line 146, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_elements.scss */
 .button-group-area .genric-btn {
-  margin-right: 10px;
+  margin-right: 100px;
   margin-top: 10px;
 }
 
@@ -3378,8 +3378,8 @@ h6 {
 .genric-btn {
   display: inline-block;
   outline: none;
-  line-height: 40px;
-  padding: 0 30px;
+  line-height: 20px;
+  padding: 0 40px;
   font-size: .8em;
   text-align: center;
   text-decoration: none;
@@ -3419,7 +3419,7 @@ h6 {
 
 /* line 182, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_elements.scss */
 .genric-btn.radius {
-  border-radius: 3px;
+  border-radius: 5px;
 }
 
 /* line 185, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_elements.scss */
@@ -3447,6 +3447,7 @@ h6 {
   color: #415094;
   background: #f9f9ff;
   border: 1px solid transparent;
+  margin-right: 50px;
 }
 
 /* line 203, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_elements.scss */
@@ -3473,6 +3474,7 @@ h6 {
   color: #fff;
   background: #ff5e13;
   border: 1px solid transparent;
+  margin-left: 30px;
 }
 
 /* line 221, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_elements.scss */
@@ -3527,8 +3529,9 @@ h6 {
 /* line 257, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_elements.scss */
 .genric-btn.info {
   color: #fff;
-  background: #38a4ff;
+  background: green;
   border: 1px solid transparent;
+  margin-left: 70px;
 }
 
 /* line 261, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_elements.scss */
@@ -3585,6 +3588,7 @@ h6 {
   color: #fff;
   background: #f44a40;
   border: 1px solid transparent;
+  margin-left: 50px;
 }
 
 /* line 301, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_elements.scss */
@@ -3599,6 +3603,7 @@ h6 {
   color: #f44a40;
   border: 1px solid #f44a40;
   background: #fff;
+
 }
 
 /* line 311, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_elements.scss */
@@ -3644,6 +3649,7 @@ h6 {
   background: #f9f9ff;
   border: 1px solid transparent;
   cursor: not-allowed;
+
 }
 
 /* line 347, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_elements.scss */
