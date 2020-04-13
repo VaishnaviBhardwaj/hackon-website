@@ -3651,6 +3651,16 @@ h6 {
   cursor: not-allowed;
 
 }
+.button-down {
+  position: relative;
+  padding: 5px;
+  margin: 30px auto;
+  background: #000;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  transition: all 0.2s linear;
+}
 
 /* line 347, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_elements.scss */
 .generic-blockquote {
