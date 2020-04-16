@@ -1232,7 +1232,7 @@ h3 {
 
 /* line 1, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_slider.scss */
 .slider_bg_1 {
-  background-image: url(../img/banner/banner.png);
+  background-image: url(../img/testmonial/symptoms.png);
 }
 
 /* line 4, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_slider.scss */
@@ -2762,7 +2762,7 @@ h3 {
 
 /* line 2, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_tesmonial.scss */
 .testmonial_area .single-testmonial {
-  padding: 180px 0;
+  padding: 250px;
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
@@ -2830,12 +2830,15 @@ h3 {
 
 /* line 58, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_tesmonial.scss */
 .testmonial_bg_1 {
-  background-image: url(../img/testmonial/homie.jpg);
+  background-image: url(../img/testmonial/symptoms.png);
 }
 
 /* line 61, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_tesmonial.scss */
 .testmonial_bg_2 {
-  background-image: url(../img/testmonial/entertainment1.jpg);
+  background-image: url(../img/testmonial/block-one.png);
+}
+.testmonial_bg_3 {
+  background-image: url(../img/testmonial/block-two.png);
 }
 
 /* line 1, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_service.scss */
