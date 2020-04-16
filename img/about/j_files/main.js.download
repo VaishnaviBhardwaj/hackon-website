@@ -1,0 +1,85 @@
+(function ($) {
+    Drupal.behaviors.firebase_push = {
+        attach: function (context, settings) {
+            $('body', context).once('web_push_notification', function () {
+
+                var config = Drupal.settings.web_push_config;
+                var banner = Drupal.settings.web_push_banner;
+                var banner_script = Drupal.settings.banner_script;
+
+                firebase.initializeApp(config);
+
+                if (firebase.messaging.isSupported()) {
+
+                    // messaging is supported
+                    const messaging = firebase.messaging();
+
+                    // Show notification
+                    if(firebase.Promise && messaging && banner && !banner_script) {
+                        $('#web_notification').show();
+                    }
+
+                    messaging
+                        .requestPermission()
+                        .then(function () {
+
+                            // Hide banner notification
+                            $('#web_notification').hide();
+
+                            // get the token in the form of promise
+                            return messaging.getToken()
+                        })
+                        .then(function(token) {
+
+                            // Send token to server
+                            sendSubscriptionToServer(token);
+                        })
+                        .catch(function (err) {
+
+                            $('#web_notification').hide();
+                            console.log("Unable to get permission to notify.");
+                        });
+                    messaging.onMessage(function(payload) {
+                        ///console.log(payload);
+
+                        // Generate HTML for message.
+                        //var data = payload.data.notification;
+                        var data = payload.data;
+                        //data = $.parseJSON(data);
+                        var messageHtml ="<div class='message-wrap'><span class='msg_close'></span><a href='"+data.url+"'><div class='msg_header'><span class='site_logo'><img src='/sites/all/themes/mygov/front_assets/images/logo.png'></span><span class='msg_title'>"+data.title+"</span></div><div class='msg_image'><img src='"+data.image+"'/></div><div class='msg_body'>"+data.body+"</div></a></div>";
+
+                        $('#web_notification_message').append(messageHtml);
+
+                        // Hide on click close.
+                        $('.msg_close').click(function () {
+                            $(this).parent('.message-wrap').hide();
+                        });
+                    });
+                } else {
+                   console.log("Browser doesn't support firebase API");
+                }
+
+            });
+
+            /**
+             *  Send subscription to server.
+             **/
+            function sendSubscriptionToServer (token) {
+              var uid = Drupal.settings.web_push_user_id;
+              if(!uid) {
+                  uid = 0;
+              }
+                $.post('/api/1.0/web_push',
+                    JSON.stringify({
+                        registration_id: token,
+                        domain_name:window.location.hostname,
+                        uid:uid
+                    }),function (data) {
+                        if(data.success) {
+                            $('#web_notification').hide();
+                        }
+                    });
+            }
+        }
+    };
+})(jQuery);
