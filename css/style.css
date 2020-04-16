@@ -1232,12 +1232,12 @@ h3 {
 
 /* line 1, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_slider.scss */
 .slider_bg_1 {
-  background-image: url(../img/testmonial/symptoms.png);
+  background-image: url(../img/elements/c1.jpg);
 }
 
 /* line 4, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_slider.scss */
 .slider_bg_2 {
-  background-image: url(../img/elements/c1.jpg);
+  background-image: url(../img/banner/cd.jpg);
 }
 
 /* line 8, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_slider.scss */
@@ -1355,7 +1355,8 @@ h3 {
 
 /* line 17, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_about.scss */
 .welcome_docmed_area .welcome_thumb .thumb_1 img {
-  width: 60%;
+  width: 89%;
+  height:60%
 }
 
 @media (max-width: 767px) {
@@ -1393,13 +1394,16 @@ h3 {
 
 /* line 39, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_about.scss */
 .welcome_docmed_area .welcome_thumb .thumb_2 img {
-  width: 89%;
+  width: 60%;
+  height:40%;
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
   /* line 39, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_about.scss */
   .welcome_docmed_area .welcome_thumb .thumb_2 img {
     width: 100%;
+    
+    
   }
 }
 
